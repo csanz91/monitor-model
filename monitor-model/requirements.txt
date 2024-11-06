@@ -1,0 +1,4 @@
+git+https://github.com/csanz91/docker_secrets
+notifiers
+setuptools
+requests

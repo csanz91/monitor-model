@@ -1,0 +1,13 @@
+services:
+  monitor:
+    container_name: monitor-model
+    build: ./monitor-model
+    restart: on-failure
+    volumes:
+      - ./monitor-model/logs:/app/logs
+      - ./monitor-model/source:/app/source
+    secrets:
+      - secrets
+secrets:
+  secrets:
+      file: ./monitor-model/secrets
